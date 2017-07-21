@@ -79,8 +79,9 @@ docker run -itd \
 ```
 
 Give it a minute or so for the Splunk and Jupyter to start, and head to the following URLs:
-http://localhost:8000
-http://localhost:8888
+
+Splunk:  http://localhost:8000
+Jupyter: http://localhost:8888
 
 You should now have both Jupyter and Splunk running, if after a minute you can't reach the URLs, check that the containers are running correctly and the network has been created by typing:
 
