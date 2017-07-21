@@ -90,11 +90,13 @@ docker ps -a
 docker network ls
 ```
 
+If anything else goes wrong, look at the instructions at the end of the page to delete the containers, and run the commands again.
+
 ## Loading the Walkthrough Notebook
 It's now time to download the Notebook...!
 https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
 
-...And head to http://localhost:8888. Load your Notebook into Jupyter and run it. That's it!
+...go back to http://localhost:8888, load your Notebook into Jupyter and run it. That's it!
 
 ## Deleting your Docker Environment
 After you've finished testing, you can delete your docker environment by typing:
@@ -105,7 +107,7 @@ docker rm --force jupyter
 docker rm --force splunk
 docker network rm jupyter-splunk
 
-### Check environment has been deleted
+### Check the Environment has been deleted
 docker ps -a
 docker network ls
 ```
