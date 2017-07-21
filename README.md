@@ -115,3 +115,6 @@ Splunk Enterprise monitors and analyzes machine data from any source to deliver 
 
 ## About Jupyter - http://jupyter.org
 The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
+
+## About Me
+https://www.linkedin.com/in/danielmartinezformoso/
