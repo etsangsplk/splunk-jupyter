@@ -77,7 +77,7 @@ docker run -itd \
   splunk/splunk:latest
 ```
 
-Give it a minute or so for the Splunk and Jupyter to start, and head to the following URLs:
+Give it a minute or so for Splunk and Jupyter to start, and head to the following URLs:
 
 Splunk:  http://localhost:8000
 Jupyter: http://localhost:8888
