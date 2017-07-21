@@ -9,13 +9,11 @@ Splunk's schema-on-read architecture allows users to create an ephemeral schema 
 Jupyter notebooks have been used by the Data Science community for years to develop and test models, and as many of our customers use both, it's only natural to bring two great things together.
 
 ## Querying Splunk from a Jupyter Notebook
-It's really simple, all you need to do is install Splunk's SDK in your Jupyter instance, and they use it to connect to Splunk.
+It's really simple, all you need to do is install Splunk's SDK in your Jupyter instance, and then import it from a Notepad to connect to Splunk. Of course, your Jupyter server must be able to reach your Splunk instance, and you'll need Splunk login credentials.
 
 You can install the Splunk's SDK using pip:
 
-```shell
-pip install splunk-sdk
-```
+```shell pip install splunk-sdk ```
 
 ## Sample Notebook
 The Notebook included in this repo serves as an example on how to install the SDK, query Splunk, and convert the results into a Pandas Dataframe. From there, you're free to use the tools you know and love.
