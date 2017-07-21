@@ -12,11 +12,15 @@ Jupyter notebooks have been used by the Data Science community for years to deve
 It's really simple, all you need to do is install Splunk's SDK in your Jupyter instance, and then import it from a Notepad to connect to Splunk. Of course, your Jupyter server must be able to reach your Splunk instance, and you'll need Splunk login credentials.
 
 You can install the Splunk's SDK using pip:
-```shell pip install splunk-sdk ```
+```shell 
+pip install splunk-sdk 
+```
 
 And then import it from within your notebook like so:
-```shell import splunklib.results as results
-import splunklib.client as client ```
+```shell 
+import splunklib.results as results
+import splunklib.client as client 
+```
 
 I've included a method that uses the library to query Splunk in the Walkthrough Notebook.
 
