@@ -1,5 +1,5 @@
 # Splunk-Jupyter
-Analyse your Splunk data from a Jupyter Notebook, as a Pandas Dataframe, into any Machine Learning algorithm.
+Analyse your Splunk data from a Jupyter Notebook, as a Pandas Dataframe. From there, use the Pandas Dataframe to develop and test any Machine Learning model.
 
 ## Overview
 One of the biggest challenges in performing Data Science is the sourcing, cleaning, and transforming of data. What is known as the ETL process takes about 80% of Data Scientists' time, which must focus most of their time in the ETL process rather than on the fun of building and testing algorithms.
