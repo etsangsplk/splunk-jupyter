@@ -6,7 +6,7 @@ One of the biggest challenges in performing Data Science is the sourcing, cleani
 
 Splunk's schema-on-read architecture allows users to create an ephemeral schema on the data each time, with each search. Splunk has created hundreds of data type mappings that extract the fields out of thousands of log files, and automatically recognizing the structure from CSV, JSON, and XML files, greatly simplifying the ETL process.
 
-Jupyter notebooks have been used by the Data Science community for years to develop and test models, and as many of our customers use both, it's only natural to bring two great things together.
+Jupyter notebooks have been used by the Data Science community for years to develop and test models, so it's only natural to bring two great things together.
 
 ## Querying Splunk from a Jupyter Notebook
 It's really simple, all you need to do is install Splunk's SDK in your Jupyter instance, and then import it from a Notepad to connect to Splunk. Of course, your Jupyter server must be able to reach your Splunk instance, and you'll need Splunk login credentials.
@@ -21,7 +21,7 @@ import splunklib.client as client ```
 I've included a method that uses the library to query Splunk in the Walkthrough Notebook.
 
 ## Walkthrough Notebook
-The Notebook included in this repo serves as an example on how to install the SDK, query Splunk, and convert the results into a Pandas Dataframe. From there, you're free to use the tools you know and love.
+The Notebook included in this repo serves as an example on how to install the SDK, query Splunk, and convert the results into a Pandas Dataframe. From there, you're free to use the libraries you know and love.
 https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
 
 ## Test it in a Docker Environment
