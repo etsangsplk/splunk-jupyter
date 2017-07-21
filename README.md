@@ -12,21 +12,31 @@ Jupyter notebooks have been used by the Data Science community for years to deve
 It's really simple, all you need to do is install Splunk's SDK in your Jupyter instance, and then import it from a Notepad to connect to Splunk. Of course, your Jupyter server must be able to reach your Splunk instance, and you'll need Splunk login credentials.
 
 You can install the Splunk's SDK using pip:
-
 ```shell pip install splunk-sdk ```
 
-## Sample Notebook
+And then import it from within your notebook like so:
+```shell import splunklib.results as results
+import splunklib.client as client ```
+
+I've included a method that uses the library to query Splunk in the Walkthrough Notebook.
+
+## Walkthrough Notebook
 The Notebook included in this repo serves as an example on how to install the SDK, query Splunk, and convert the results into a Pandas Dataframe. From there, you're free to use the tools you know and love.
 https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
 
 ## Test it in a Docker Environment
 If you'd like to play with the idea but are not ready to bring it to your production environment, I've built a docker environment for you to play with.
 
+If you haven't downloaded Docker at this point, please visit: 
+https://www.docker.com/get-docker
+
 This has been tested in MacOS running Docker Community Edition.
 Version 17.06.1-ce-rc1-mac20 (18682)
 Channel: edge
 
-First, we create a User-Defined Network. This network will host our containers, and allow for DNS hostname discovery for the containers within the network, as the default bridge network doesn't allow for it.
+First, we must create a User-Defined Network. This network will host our containers and allow for DNS hostname discovery for the containers within this network, as the default docker bridge network doesn't allow for it.
+
+Make sure you now open a shell session, and copy/paste the following:
 
 ```shell
 ### Create a User-Defined bridge network (needed for DNS hostname discovery)
@@ -38,7 +48,7 @@ docker network create \
   jupyter-splunk
 ```
 
-The 
+We must now create two docker containers, one for Jupyter, and one for Splunk. Upon running the commands, docker will automatically pull the images and get the containers going for us.
 
 ```shell
 ### Create a docker container running an unauthenticated Jupyter instance.
@@ -62,11 +72,31 @@ docker run -itd \
   -e "SPLUNK_START_ARGS=--accept-license" \
   -e "SPLUNK_USER=root" \
   splunk/splunk:latest
+```
 
+Give it a minute or so for the Splunk and Jupyter to start, and head to the following URLs:
+http://localhost:8000
+http://localhost:8888
+
+You should now have both Jupyter and Splunk running, if after a minute you can't reach the URLs, check that the containers are running correctly and the network has been created by typing:
+
+```shell
 ### Check the User Defined network has been created and containers are running
 docker ps -a
 docker network ls
+```
 
+## Loading the Walkthrough Notebook
+It's now time to download the Notebook...
+https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
+
+...And head to http://localhost:8888. Load your Notebook into Jupyter and run it. That's it!
+
+## Deleting your Docker Environment
+
+After you've finished testing, you can delete your docker environment by typing:
+
+```shell
 ### Delete Environment
 docker rm --force jupyter
 docker rm --force splunk
@@ -76,8 +106,6 @@ docker network rm jupyter-splunk
 docker ps -a
 docker network ls
 ```
-
-
 
 ## About Splunk - http://splunk.com
 Splunk Enterprise monitors and analyzes machine data from any source to deliver Operational Intelligence to optimize your IT, security and business performance. With intuitive analysis features, machine learning, packaged applications and open APIs, Splunk Enterprise is a flexible platform that scales from focused use cases to an enterprise-wide analytics backbone.
