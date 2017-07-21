@@ -62,7 +62,6 @@ docker run -itd \
   --hostname jupyter \
   --network=jupyter-splunk \
   -p 8888:8888 \
-  -v "/Users/danielmartinez/Library/Mobile Documents/com~apple~CloudDocs/Programming/Python/:/home/jovyan/work" \
   jupyter/datascience-notebook:latest \
   start-notebook.sh --NotebookApp.token=''
 
