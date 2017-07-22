@@ -40,7 +40,7 @@ Channel: edge
 
 First, we must create a User-Defined Network. This network will host our containers and allow for DNS hostname discovery for the containers within this network, as the default docker bridge network doesn't allow for it.
 
-Make sure you now open a shell session, and copy/paste the following:
+Then, open a shell session and copy/paste the following:
 
 ```shell
 ### Create a User-Defined bridge network (needed for DNS hostname discovery)
