@@ -15,17 +15,13 @@ I've included a method that installs and uses the Splunk SDK library to query Sp
 
 ## Walkthrough Notebook
 The Notebook included in this repo serves as an example on how to install the SDK, query Splunk, and convert the results into a Pandas Dataframe. From there, you're free to use the libraries you know and love.
-https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
+- https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
 
 ## Test it in a Docker Environment
 If you'd like to play with the idea but are not ready to bring it to your production environment, I've built a docker environment for you to play with.
 
 If you haven't downloaded Docker at this point, please visit: 
-https://www.docker.com/get-docker
-
-This has been tested in MacOS running Docker Community Edition.
-Version 17.06.1-ce-rc1-mac20 (18682)
-Channel: edge
+- https://www.docker.com/get-docker
 
 First, we must create a User-Defined Network. This network will host our containers and allow for DNS hostname discovery for the containers within this network, as the default docker bridge network doesn't allow for it.
 
@@ -68,8 +64,10 @@ docker run -itd \
 
 Give it a minute or so for Splunk and Jupyter to start, and head to the following URLs:
 
-Splunk:  http://localhost:8000
-Jupyter: http://localhost:8888
+Splunk:  
+- http://localhost:8000
+Jupyter: 
+- http://localhost:8888
 
 You should now have both Jupyter and Splunk running. If after a minute you can't reach the URLs, check that the containers are running correctly and the network has been created by typing:
 
@@ -82,10 +80,10 @@ docker network ls
 If anything else goes wrong, look at the instructions at the end of the page to delete the containers, and run the commands again.
 
 ## Loading the Walkthrough Notebook
-It's now time to download the Notebook...!
-https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
+It's now time to download the Notebook...
+- https://github.com/dformoso/splunk-jupyter/blob/master/From%20Splunk%20to%20Jupyter%20and%20into%20a%20Pandas%20Dataframe.ipynb
 
-...go back to http://localhost:8888, load your Notebook into Jupyter and run it. That's it!
+...go back to http://localhost:8888, load your Notebook into Jupyter and run it.
 
 ## Deleting your Docker Environment
 After you've finished testing, you can delete your docker environment by typing:
