@@ -66,6 +66,7 @@ Give it a minute or so for Splunk and Jupyter to start, and head to the followin
 
 Splunk:  
 - http://localhost:8000
+
 Jupyter: 
 - http://localhost:8888
 
