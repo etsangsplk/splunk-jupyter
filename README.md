@@ -47,7 +47,7 @@ docker run -itd \
   --hostname jupyter \
   --network=jupyter-splunk \
   -p 8888:8888 \
-  jupyter/datascience-notebook:latest \
+  jupyter/tensorflow-notebook:latest \
   start-notebook.sh --NotebookApp.token=''
 
 ### Create a docker container running the latest Splunk version.
