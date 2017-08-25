@@ -86,6 +86,8 @@ It's now time to download the Notebook...
 
 ...go back to http://localhost:8888, load your Notebook into Jupyter and run it.
 
+Make sure the Notebook is running on Python 2.7. Splunk's SDK works only with that version.
+
 ## Deleting your Docker Environment
 After you've finished testing, you can delete your docker environment by typing:
 
