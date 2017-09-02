@@ -1,4 +1,4 @@
-# Splunk-Jupyter
+# Splunk - Jupyter Integration for Data Science
 Analyse your Splunk data from a Jupyter Notebook, as a Pandas Dataframe. From there, use the Pandas Dataframe to develop and test any Machine Learning model.
 
 ## Overview
